@@ -15,4 +15,4 @@ const contentSchema = new Schema({
     sliderSrc: [String],
 });
 
-module.exports = mongoose.model('posts', contentSchema)
+module.exports = mongoose.model('content', contentSchema)

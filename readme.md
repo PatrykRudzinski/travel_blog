@@ -6,6 +6,7 @@
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [API Documentation](APIDocumentation)
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
@@ -29,6 +30,23 @@ Add more general information about project. What the purpose of the project is? 
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
+
+## API Documentation
+`api/article` -> all articles _done_
+
+`api/article/id` -> chosen article content _done_
+
+`api/article/last=x` -> last x articles
+
+`api/article/tags=[...]` -> articles with tags
+
+`api/article/author=x(id)` -> articles written by x
+
+-------------------
+
+`api/blogger` -> all bloggers
+
+`api/blogger/id` -> blogger info
 
 ## Features
 List of features ready and TODOs for future development

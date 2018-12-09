@@ -21,4 +21,4 @@ const articleSchema = new Schema({
     author_ref: { type: String, required: true },
     content_ref: { type: String, required: true },
 })
-module.exports = mongoose.model('posts', articleSchema)
+module.exports = mongoose.model('article', articleSchema)

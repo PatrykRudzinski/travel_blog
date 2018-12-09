@@ -8,4 +8,4 @@ const bloggerSchema = new Schema({
     description: { type: String, required: true }
 })
 
-module.exports = mongoose.model('about', bloggerSchema)
+module.exports = mongoose.model('blogger', bloggerSchema)
