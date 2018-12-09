@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const noWhiteSpaces = value => !/\s/.test(value);
 
-const postsApiModel = new Schema({
+const articleSchema = new Schema({
     isPublished: { type: Boolean, required: true},
     title: { type: String, required: true, unique: true },
     subtitle: { type: String, required: true },
@@ -21,4 +21,4 @@ const postsApiModel = new Schema({
     author_ref: { type: String, required: true },
     content_ref: { type: String, required: true },
 })
-module.exports = mongoose.model('posts', postsApiModel)
+module.exports = mongoose.model('posts', articleSchema)

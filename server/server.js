@@ -1,7 +1,7 @@
 const express = require('express');
 const next = require('next');
-const postsApiRouter = require('./routers/postsApiRouter');
-const aboutApiRouter = require('./routers/aboutApiRouter');
+const articlesRouter = require('./routers/articlesRouter');
+const bloggersRouter = require('./routers/bloggersRouter');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
@@ -18,8 +18,8 @@ app.prepare()
         server.use(bodyParser.json());
         server.use(bodyParser.urlencoded({ extended: true }));
 
-        server.use('/api/posts', postsApiRouter);
-        server.use('/api/about', aboutApiRouter);
+        server.use('/api/article', articlesRouter);
+        server.use('/api/blogger', bloggersRouter);
 
         server.get('/post/:id', (req, res) => {
             const actualPage = '/post'
