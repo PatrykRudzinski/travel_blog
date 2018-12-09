@@ -13,7 +13,7 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
+Educational purpose application. Simple travel blog with content manage system.
 
 
 ## Screenshots
@@ -29,7 +29,11 @@ Add more general information about project. What the purpose of the project is? 
 * Styled Components
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+Clone repo and run
+```
+npm run build
+npm run dev 
+```
 
 ## API Documentation
 `api/article` -> all articles _done_
@@ -50,18 +54,18 @@ Describe how to install / setup your local environement / add link to demo versi
 
 ## Features
 List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
+* Primitive CRUD in MongoDB
 
 To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+* Configure endpoints
+* Fetching between collections
+* Filter requests
 
 ## Status
 Project is: _in progress_
 
 ## Inspiration
-Add here credits. Project inspired by..., based on...
+I like travel and code, so...
 
 ## Contact
+[patrykrudzinski@gmail.com](patrykrudzinski@gmail.com)
