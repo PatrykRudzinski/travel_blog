@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nodemon server/server.js",
     "build": "next build",
-    "start": "NODE_ENV=production nodemon server/server.js"
+    "start": "NODE_ENV=production nodemon server/server.js",
+    "lint": "eslint . --ext .js --ext .jsx",
+    "lint-fix": "eslint . --ext .js --ext .jsx --fix"
   },
   "keywords": [],
   "author": "",
@@ -29,6 +31,11 @@
     "transform-runtime": "0.0.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.1.0"
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "eslint": "^5.11.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
   }
 }

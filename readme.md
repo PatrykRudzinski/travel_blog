@@ -38,7 +38,7 @@ npm run dev
 ## API Documentation
 `api/article` -> all articles _done_
 
-`api/article/id` -> chosen article content _done_
+`api/article/id` -> chosen article content
 
 `api/article/last=x` -> last x articles
 
