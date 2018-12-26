@@ -1,5 +1,5 @@
 const articlesRouter = require('express').Router();
-const Article = require('../schemas/articleSchema');
+const Article = require('../schema/articleSchema');
 
 articlesRouter.route('/')
   .get((req, res) => {
@@ -34,7 +34,7 @@ articlesRouter.route('/:articleId')
       req.article[b] = req.body[b];
     }
     req.article.save();
-    res.json(article);
+    res.json(article); // eslint-disable-line
   })
   .delete((req, res) => {
     req.article.remove((err) => {

@@ -2,13 +2,13 @@ const express = require('express');
 const next = require('next');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const articlesRouter = require('./routers/articlesRouter');
-const bloggersRouter = require('./routers/bloggersRouter');
+const articlesRouter = require('./router/articlesRouter');
+const bloggersRouter = require('./router/bloggersRouter');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const db = mongoose.connect('mongodb://admin:dupa123@ds024778.mlab.com:24778/travel_blog');
+mongoose.connect('mongodb://admin:dupa123@ds024778.mlab.com:24778/travel_blog');
 
 app.prepare()
   .then(() => {
@@ -29,6 +29,7 @@ app.prepare()
     server.get('*', (req, res) => handle(req, res));
 
     /*= ===== SERVER LISTEN ===== */
+    /* eslint-disable no-console */
 
     server.listen(3000, (err) => {
       if (err) throw err;
@@ -39,3 +40,4 @@ app.prepare()
     console.error(ex.stack);
     process.exit(1);
   });
+/* eslint-enable no-console */

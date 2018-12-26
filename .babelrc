@@ -10,6 +10,17 @@
                 "displayName": true,
                 "preprocess": false
             }
+        ],
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./"
+                ],
+                "alias": {
+                    "@components": "./components"
+                }
+            }
         ]
     ]
 }
