@@ -3,17 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon server/server.js",
-    "build": "next build",
-    "start": "NODE_ENV=production nodemon server/server.js",
-    "lint": "eslint . --ext .js --ext .jsx",
-    "lint-fix": "eslint . --ext .js --ext .jsx --fix"
+    "dev": "nodemon ./app/server/server.js",
+    "build": "next build ./app",
+    "start": "NODE_ENV=production nodemon ./app/server/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-eslint": "^10.0.1",
     "babel-register": "^6.26.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
@@ -31,11 +28,6 @@
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.1.0",
     "babel-plugin-module-resolver": "^3.1.1",
-    "babel-plugin-styled-components": "^1.8.0",
-    "eslint": "^5.11.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "babel-plugin-styled-components": "^1.8.0"
   }
 }

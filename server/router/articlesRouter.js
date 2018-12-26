@@ -30,9 +30,9 @@ articlesRouter.route('/:articleId')
     if (req.body._id) {
       delete req.body._id;
     }
-    for (const b in req.body) {
-      req.article[b] = req.body[b];
-    }
+    Object.keys(req.body).forEach(b => {
+      return (req.article[b] = req.body[b])
+    });
     req.article.save();
     res.json(article); // eslint-disable-line
   })
