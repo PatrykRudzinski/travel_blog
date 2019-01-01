@@ -1,5 +1,6 @@
 const articlesRouter = require('express').Router();
 const Article = require('../schema/articleSchema');
+const Content = require('../schema/contentSchema');
 
 articlesRouter.route('/')
   .get((req, res) => {

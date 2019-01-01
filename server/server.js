@@ -8,7 +8,7 @@ const bloggersRouter = require('./router/bloggersRouter');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-mongoose.connect('mongodb://admin:dupa123@ds024778.mlab.com:24778/travel_blog');
+const db = mongoose.connect('mongodb://admin:dupa123@ds024778.mlab.com:24778/travel_blog');
 
 app.prepare()
   .then(() => {
@@ -29,7 +29,6 @@ app.prepare()
     server.get('*', (req, res) => handle(req, res));
 
     /*= ===== SERVER LISTEN ===== */
-    /* eslint-disable no-console */
 
     server.listen(3000, (err) => {
       if (err) throw err;
@@ -40,4 +39,3 @@ app.prepare()
     console.error(ex.stack);
     process.exit(1);
   });
-/* eslint-enable no-console */

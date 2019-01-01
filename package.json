@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nodemon ./app/server/server.js",
-    "build": "next build ./app",
-    "start": "NODE_ENV=production nodemon ./app/server/server.js"
+    "dev": "nodemon server/server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production nodemon server/server.js"
   },
   "keywords": [],
   "author": "",
