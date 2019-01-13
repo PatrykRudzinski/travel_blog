@@ -3,7 +3,6 @@ const next = require('next');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const articlesRouter = require('./router/articlesRouter');
-const bloggersRouter = require('./router/bloggersRouter');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -18,7 +17,6 @@ app.prepare()
     server.use(bodyParser.urlencoded({ extended: true }));
 
     server.use('/api/article', articlesRouter);
-    server.use('/api/blogger', bloggersRouter);
 
     server.get('/post/:id', (req, res) => {
       const actualPage = '/post';

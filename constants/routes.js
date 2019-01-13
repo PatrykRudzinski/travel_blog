@@ -5,5 +5,5 @@ export default {
   CONTACT: '/contact',
 
   ADMIN: '/admin',
-  ADMIN_NEW_POST: 'admin/new-post',
+  ADMIN_EDIT_ARTICLE: 'admin/edit-article',
 };

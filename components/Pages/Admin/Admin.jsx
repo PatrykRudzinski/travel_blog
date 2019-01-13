@@ -6,9 +6,10 @@ import routes from '@constants/routes';
 const Admin = () => (
   <Layout>
     <p>This is the Admin page</p>
-    <Link href={routes.ADMIN_NEW_POST}>
-      Add new
+    <Link href={routes.ADMIN_EDIT_POST}>
+      Add new POST 
     </Link>
+    (ADMIN should be SPA!!!)
   </Layout>
 );
 

@@ -7,7 +7,7 @@ const Input = styled(Field)`
   background: red;
 `
 
-const NewPost = () => (
+const EditArticle = () => (
   <Layout>
     <Formik
       onSubmit={(values, actions) => {
@@ -36,4 +36,4 @@ const NewPost = () => (
   </Layout>
 );
 
-export default NewPost;
+export default EditArticle;
