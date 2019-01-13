@@ -19,7 +19,6 @@ const articleSchema = new Schema({
   createDate: { type: Number, required: true },
   lastUpdateDate: { type: Number, required: true },
   firstPublishedDate: { type: Number, required: true },
-  author_ref: { type: String, required: true },
   content_ref: { type: String, required: true },
 });
 module.exports = mongoose.model('article', articleSchema);
