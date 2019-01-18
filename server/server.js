@@ -3,11 +3,12 @@ const next = require('next');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const articlesRouter = require('./router/articlesRouter');
+const config = require('../config');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const db = mongoose.connect('mongodb://admin:dupa123@ds024778.mlab.com:24778/travel_blog');
+const db = mongoose.connect(config.mongoPass);
 
 app.prepare()
   .then(() => {
