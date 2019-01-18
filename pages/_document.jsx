@@ -24,6 +24,8 @@ export default class MyDocument extends Document {
         <Head>
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
+          <link href="/static/styles/antd.min.css" rel="stylesheet" />
+          {/* TODO: get styles only in ADMIN sites */}
         </Head>
         <body>
           <Main />

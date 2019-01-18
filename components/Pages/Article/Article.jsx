@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '@components/Layout';
+import { Layout } from '@components/Layout';
 import fetch from 'isomorphic-unfetch';
 
 const Article = props => (

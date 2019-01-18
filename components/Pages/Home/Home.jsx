@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
-import Layout from '@components/Layout';
+import { Layout } from '@components/Layout';
 
 const Home = props => (
   <Layout>
