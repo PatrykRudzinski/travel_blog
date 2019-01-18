@@ -57,7 +57,7 @@ class EditArticleGeneral extends React.Component {
           {...formItemLayout}
           label={(
             <span>
-              Nickname&nbsp;
+              Srikname&nbsp;
               <Tooltip title="What do you want others to call you?">
                 <Icon type="question-circle-o" />
               </Tooltip>
@@ -65,7 +65,7 @@ class EditArticleGeneral extends React.Component {
           )}
         >
           {getFieldDecorator('nickname', {
-            rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
+            rules: [{ required: true, message: 'Please input your srickname!', whitespace: true }],
           })(
             <Input />
           )}
