@@ -18,15 +18,9 @@ class HashRouter extends React.Component {
   }
 
   hashChangeHandler = () => {
-    const path = window.location.hash.replace('#', '')
+    const path = window.location.hash.replace('#', '');
     this.setState({path})
   }
-
-  // pushHash = e => {
-  //   e.preventDefault();
-  //   const url = e.target.getAttribute('path').replace('/', '#');
-  //   history.pushState(null, null, url);
-  // }
 
   findComponent = path => {
 

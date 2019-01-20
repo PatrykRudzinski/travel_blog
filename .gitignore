@@ -1,5 +1,7 @@
-.next
 node_modules
+.next
+.idea
 *.log
+
 package-lock.json
 config.json

@@ -23,16 +23,14 @@ const contentInit = {
 }
 
 const EditArticle = () => (
-  <LayoutAdmin>
-    <Collapse bordered={false} defaultActiveKey={['general']}>
-      <Panel header="General properties" key="general">
-        <EditArticleGeneral />
-      </Panel>
-      <Panel header="Content" key="content">
-        <EditArticleContent />
-      </Panel>
-    </Collapse>
-  </LayoutAdmin>
+  <Collapse bordered={false} defaultActiveKey={['general']}>
+    <Panel header="General properties" key="general">
+      <EditArticleGeneral />
+    </Panel>
+    <Panel header="Content" key="content">
+      <EditArticleContent />
+    </Panel>
+  </Collapse>
 );
 
 export default EditArticle;

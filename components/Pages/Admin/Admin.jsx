@@ -1,19 +1,20 @@
 import React from 'react';
 import { LayoutAdmin } from '@components/Layout';
-import { EditArticleContent, EditArticleGeneral } from '@components/Forms';
 import { Layout } from '@components/Layout';
-import { HashRouter, HashRoute, HashRouteDefault } from '@components/HashRouter';
-
+import { HashRouter, HashRoute } from '@components/HashRouter';
+import EditArticle from "../../PagesAdmin/EditArticle";
+import Home from "../../PagesAdmin/Home";
+import Articles from "../../PagesAdmin/Articles";
 
 const Admin = () => (
   <LayoutAdmin>
     <HashRouter>
-      <HashRoute default component={Layout} extraProps={{id:1}} />
-      <HashRoute path='article' component={EditArticleContent} extraProps={{id:1}} />
-      <HashRoute path='general' component={EditArticleGeneral} extraProps={{id:2}} />
+      <HashRoute default path='home' component={Home}/>
+      <HashRoute path='articles-list' component={Articles}/>
+      <HashRoute path='articles-edit' component={EditArticle}/>
+      <HashRoute path='articles-new' component={EditArticle}/>
     </HashRouter>
   </LayoutAdmin>
-)
-
+);
 
 export default Admin;
