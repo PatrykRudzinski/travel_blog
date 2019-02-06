@@ -3,6 +3,11 @@ import {
   Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete,
 } from 'antd';
 
+const contentInit = {
+  content: '',
+  order: 0,
+};
+
 class EditArticleContent extends React.Component {
   state = {
     confirmDirty: false,
@@ -16,12 +21,12 @@ class EditArticleContent extends React.Component {
         console.log('Received values of form: ', values);
       }
     });
-  }
+  };
 
   handleConfirmBlur = (e) => {
     const value = e.target.value;
     this.setState({ confirmDirty: this.state.confirmDirty || !!value });
-  }
+  };
 
   render() {
     const { getFieldDecorator } = this.props.form;

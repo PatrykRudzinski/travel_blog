@@ -1,6 +1,5 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-// Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -22,8 +21,8 @@ export default class MyDocument extends Document {
     return (
       <html lang="en-GB">
         <Head>
-          {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
+          <link rel="stylesheet" href="//cdn.quilljs.com/1.2.6/quill.snow.css" />
           <link href="/static/styles/antd.min.css" rel="stylesheet" />
           {/* TODO: get styles only in ADMIN sites */}
         </Head>

@@ -5,23 +5,6 @@ import { EditArticleGeneral, EditArticleContent } from '@components/Forms';
 
 const Panel = Collapse.Panel;
 
-const generalInit = { 
-  isPublished: false,
-  title: '',
-  subtitle: '',
-  description: '',
-  mainImage: '',
-  tags: [],
-  createDate: new Date(),
-  lastUpdateDate: new Date(),
-  firstPublishedDate: null,
-};
-
-const contentInit = {
-  content: '',
-  order: 0,
-}
-
 const EditArticle = () => (
   <Collapse bordered={false} defaultActiveKey={['general']}>
     <Panel header="General properties" key="general">
