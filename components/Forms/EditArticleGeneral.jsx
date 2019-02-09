@@ -173,7 +173,7 @@ class EditArticleGeneral extends React.Component {
           {getFieldDecorator('publish', {
             valuePropName: 'checked',
           })(
-            <Checkbox>Publish on save</Checkbox>
+            <Checkbox>Published</Checkbox>
           )}
         </Form.Item>
       </Form>
@@ -182,5 +182,3 @@ class EditArticleGeneral extends React.Component {
 }
 
 export default Form.create({ name: 'articleGeneral' })(EditArticleGeneral);
-
-// ReactDOM.render(<WrappedArticleGeneral />, mountNode);

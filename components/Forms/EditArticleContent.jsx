@@ -1,95 +1,45 @@
 import React from 'react';
-import {
-  Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete,
-} from 'antd';
-
-const contentInit = {
-  content: '',
-  order: 0,
-};
+import { EditorState } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import '@styles/wysiwyg.css';
 
 class EditArticleContent extends React.Component {
   state = {
-    confirmDirty: false,
-    autoCompleteResult: [],
+    isClient: false,
+    editorState: null,
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    this.props.form.validateFieldsAndScroll((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
-      }
-    });
+  componentDidMount = () => {
+    this.setState({
+      isClient: true,
+      editorState: EditorState.createEmpty(),
+    })
   };
 
-  handleConfirmBlur = (e) => {
-    const value = e.target.value;
-    this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+  onEditorStateChange = (editorState) => {
+    this.setState({ editorState })
   };
 
   render() {
-    const { getFieldDecorator } = this.props.form;
-    const { autoCompleteResult } = this.state;
 
-    const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 8 },
-      },
-      wrapperCol: {
-        xs: { span: 24 },
-        sm: { span: 16 },
-      },
-    };
+    const { isClient, editorState } = this.state;
 
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0,
-        },
-        sm: {
-          span: 16,
-          offset: 8,
-        },
-      },
-    };
-
-    return (
-      <Form onSubmit={this.handleSubmit}>
-        <Form.Item
-          {...formItemLayout}
-          label={(
-            <span>
-              Nickname&nbsp;
-              <Tooltip title="What do you want others to call you?">
-                <Icon type="question-circle-o" />
-              </Tooltip>
-            </span>
-          )}
-        >
-          {getFieldDecorator('nickname', {
-            rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
-          })(
-            <Input />
-          )}
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          {getFieldDecorator('agreement', {
-            valuePropName: 'checked',
-          })(
-            <Checkbox>I have read the <a href="">agreement</a></Checkbox>
-          )}
-        </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          <Button type="primary" htmlType="submit">Register</Button>
-        </Form.Item>
-      </Form>
-    );
+      if(isClient) {
+        return (
+          <Editor
+            wrapperClassName="wrapper"
+            editorClassName="editor"
+            toolbarClassName="toolbar"
+            toolbarOnFocus
+            editorState={editorState}
+            onEditorStateChange={this.onEditorStateChange}
+          />
+        )
+      } else {
+        return null
+      }
   }
 }
 
-export default Form.create({ name: 'articleContent' })(EditArticleContent);
-
-// ReactDOM.render(<WrappedArticleGeneral />, mountNode);
+export default EditArticleContent;
