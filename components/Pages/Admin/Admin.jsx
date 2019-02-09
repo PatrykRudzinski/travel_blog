@@ -5,6 +5,7 @@ import { HashRouter, HashRoute } from '@components/HashRouter';
 import EditArticle from "../../PagesAdmin/EditArticle";
 import Home from "../../PagesAdmin/Home";
 import Articles from "../../PagesAdmin/Articles";
+import 'antd/dist/antd.css';
 
 const Admin = () => (
   <LayoutAdmin>

@@ -22,9 +22,6 @@ export default class MyDocument extends Document {
       <html lang="en-GB">
         <Head>
           {this.props.styleTags}
-          <link rel="stylesheet" href="//cdn.quilljs.com/1.2.6/quill.snow.css" />
-          <link href="/static/styles/antd.min.css" rel="stylesheet" />
-          {/* TODO: get styles only in ADMIN sites */}
         </Head>
         <body>
           <Main />
