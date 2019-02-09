@@ -64,9 +64,6 @@ class LayoutAdmin extends React.Component {
               <Menu.Item key="articles-list">
                 <a href="#articles-list">List</a>
               </Menu.Item>
-              <Menu.Item key="articles-edit">
-                <a href="#articles-edit">Edit</a>
-              </Menu.Item>
               <Menu.Item key="articles-new">
                 <a href="#articles-new">New</a>
               </Menu.Item>
