@@ -19,7 +19,8 @@
                 ],
                 "alias": {
                     "@components": "./components",
-                    "@constants": "./constants"
+                    "@constants": "./constants",
+                    "@styles": "./styles"
                 }
             }
         ]
