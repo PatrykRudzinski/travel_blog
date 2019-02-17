@@ -1,5 +1,5 @@
 # Travel Blog
-> Awesome blog in React.js. 
+> Work in progress... 
 
 ## Table of contents
 * [General info](#general-info)
