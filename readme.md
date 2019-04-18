@@ -1,6 +1,14 @@
 # Travel Blog
 > Work in progress... 
 
+1. ogarnąc env
+1. postawic mongo lokalnie
+1. refactor
+1. tylko jeden admin
+1. testy b + f
+1. WYSIWYG?
+1. redux
+
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
